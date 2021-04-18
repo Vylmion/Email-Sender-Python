@@ -14,7 +14,7 @@ email.set_content(hmtl.substitute({"name": "TinTin"}), "html")
 with smtplib.SMTP(host="smtp.gmail.com", port=587) as smtp:
     smtp.ehlo()
     smtp.starttls()
-    # Add bellow the emails address where you send FROM and password.
+    # Add bellow the email address where you send FROM and password.
     smtp.login("email", "password")
     smtp.send_message(email)
     print("Jobs Done!")
